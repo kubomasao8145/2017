@@ -11,8 +11,9 @@ var separate_time=functon(time){
 var now= new Data();
 var counter = separate_time(now);
 var diff=target.getTime()-now.getTime();
+var counter=separate_time(diff);
 document.getElementById('countdown').textContent=
-	'スタートしてからしてから'
+	'スタートしてから'
 	counter[0]='秒';
 　　　　refresh();
 THREE.GeometryUtils = {
