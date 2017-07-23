@@ -139,7 +139,7 @@
   var font_loader = new THREE.FontLoader();
   font_loader.load( 'helvetiker_regular.typeface.json', function ( response  ) {
     var material_font = new THREE.MeshBasicMaterial( { color:0xffffff } );
-    var geometry_ready = new THREE.TextGeometry( '地獄へ', {
+    var geometry_ready = new THREE.TextGeometry( 'Welcome', {
       font: response,
       size: 0.5,
       height: 0.3,
@@ -147,7 +147,7 @@
       bevelEnabled: false,
     } );
     geometry_ready.center();
-    var geometry_clear = new THREE.TextGeometry( '人間かな？？', {
+    var geometry_clear = new THREE.TextGeometry( 'what？？', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -155,7 +155,7 @@
       bevelEnabled: false,
     } );
     geometry_clear.center();
-    var geometry_gover = new THREE.TextGeometry( '再チャレンジしてね', {
+    var geometry_gover = new THREE.TextGeometry( 'HAHA', {
       font: response,
       size: 1.0,
       height: 0.3,
