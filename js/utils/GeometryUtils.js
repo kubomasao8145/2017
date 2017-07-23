@@ -3,6 +3,18 @@
  * @author alteredq / http://alteredqualia.com/
  */
 
+var separate_time=functon(time){
+    var sec =Math.floor((time/1000)&60);
+	return[sec];
+	
+}
+var now= new Data();
+var counter = separate_time(now);
+var diff=target.getTime()-now.getTime();
+document.getElementById('countdown').textContent=
+	'スタートしてからしてから'
+	counter[0]='秒';
+　　　　refresh();
 THREE.GeometryUtils = {
 
 	// Merge two geometries or geometry and geometry from object (using object's transform)
