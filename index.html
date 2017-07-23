@@ -78,7 +78,7 @@
   var near   = 1;
   var far    = 1000;
   var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
-  camera.position.set( 110, 420, -120 );
+  camera.position.set( 110, 420, 120 );
   camera.lookAt({x:0, y:0, z:0 });
   
   var controls = new THREE.OrbitControls(camera);
@@ -105,7 +105,7 @@
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1], 
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 
-    [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+    [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1], 
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], 
   ];
   load_num++;
@@ -217,8 +217,8 @@
       break;
     case STATE.PLAY:
       // プレイ中
-      var ix = Math.floor(pos.x+8.0);
-      var iz = Math.floor(pos.z+4.0);
+      var ix = Math.floor(pos.x+6.0);
+      var iz = Math.floor(pos.z+3.0);
       var on_surface = false;
       var is_cup_in = false;
       if(0 <= iz && iz < stage_data.length
