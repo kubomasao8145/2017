@@ -209,7 +209,7 @@
       pos.set(-7.5,0.5,-2.5);
       vel.set(0,0,0);
       mesh.position.set(pos.x,pos.y,pos.z);
-      mesh.rotateY(0.001*elapsedTime);// 自転
+      mesh.rotateY(0.003*elapsedTime);// 自転
       if(mousedown){
         scene.remove(font_ready);
         state = STATE.PLAY;
