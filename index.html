@@ -75,9 +75,9 @@
   var fov    = 1;
   var aspect = width / height;
   var near   = 1;
-  var far    = 1000;
+  var far    = 1200;
   var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
-  camera.position.set( 0, 500, 0 );
+  camera.position.set( 0, 400, 0 );
   camera.lookAt({x:0, y:0, z:0 });
   
   var controls = new THREE.OrbitControls(camera);
@@ -89,7 +89,7 @@
   var load_num = 1;
   var loader = new THREE.TextureLoader();
   loader.load( 'pVl2Uoxs.jpg', function ( texture ) {
-    var geometry = new THREE.SphereGeometry( 0.5, 32, 16 );
+    var geometry = new THREE.SphereGeometry( 0.5, 30, 16 );
     var material = new THREE.MeshLambertMaterial( { map: texture } );
     mesh = new THREE.Mesh( geometry, material );
     scene.add( mesh );
@@ -138,16 +138,16 @@
   load_num++;
   var font_loader = new THREE.FontLoader();
   font_loader.load( 'helvetiker_regular.typeface.json', function ( response  ) {
-    var material_font = new THREE.MeshBasicMaterial( { color: #556b2f } );
-    var geometry_ready = new THREE.TextGeometry( 'Ready?', {
+    var material_font = new THREE.MeshBasicMaterial( { color:0xffffff } );
+    var geometry_ready = new THREE.TextGeometry( '地獄へ', {
       font: response,
-      size: 1.5,
-      height: 0.1,
-      curveSegments: 12,
+      size: 0.5,
+      height: 0.3,
+      curveSegments: 10,
       bevelEnabled: false,
     } );
     geometry_ready.center();
-    var geometry_clear = new THREE.TextGeometry( 'Clear!', {
+    var geometry_clear = new THREE.TextGeometry( '人間かな？？', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -155,11 +155,11 @@
       bevelEnabled: false,
     } );
     geometry_clear.center();
-    var geometry_gover = new THREE.TextGeometry( 'GAME OVER', {
+    var geometry_gover = new THREE.TextGeometry( '再チャレンジしてね', {
       font: response,
-      size: 1.5,
-      height: 0.1,
-      curveSegments: 12,
+      size: 1.0,
+      height: 0.3,
+      curveSegments: 11,
       bevelEnabled: false,
     } );
     geometry_gover.center();
