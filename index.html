@@ -11,7 +11,19 @@
 <script src="OrbitControls.js"></script>
 <script src="js/utils/GeometryUtils.js"></script>
 
-var separate_time=functon(time){
+
+<script>
+  var mesh = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
+  var font_ready = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
+  var font_clear = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
+  var font_gover = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
+  var pos = new THREE.Vector3();
+  var vel = new THREE.Vector3();
+  var stage_mesh = new Array();
+  var mousedown = false;
+  var mousePosition;
+	
+	var separate_time=functon(time){
     var sec =Math.floor((time/1000)&60);
 	return[sec];
 	
@@ -25,16 +37,6 @@ document.getElementById('countdown').textContent=
 	counter[0]='秒';
 　　　　refresh();
 
-<script>
-  var mesh = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
-  var font_ready = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
-  var font_clear = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
-  var font_gover = new THREE.Mesh( new THREE.SphereGeometry(), new THREE.MeshBasicMaterial());// dummy
-  var pos = new THREE.Vector3();
-  var vel = new THREE.Vector3();
-  var stage_mesh = new Array();
-  var mousedown = false;
-  var mousePosition;
   
   var STATE = {
     INIT: 0,
