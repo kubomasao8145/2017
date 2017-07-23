@@ -23,20 +23,6 @@
   var mousedown = false;
   var mousePosition;
 	
-	var separate_time=functon(time){
-    var sec =Math.floor((time/1000)&60);
-	return[sec];
-	
-}
-var now= new Data();
-var counter = separate_time(now);
-var diff=target.getTime()-now.getTime();
-var counter=separate_time(diff);
-document.getElementById('countdown').textContent=
-	'スタートしてから'
-	counter[0]='秒';
-　　　　refresh();
-
   
   var STATE = {
     INIT: 0,
